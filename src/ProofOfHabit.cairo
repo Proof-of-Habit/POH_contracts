@@ -186,7 +186,7 @@ pub mod ProofOfHabit {
             // Update user's longest streak if necessary
             let current_longest = self.longest_streaks.read(caller);
             if current_streak + 1 > current_longest {
-                self.longest_streaks.write(caller, current_streak);
+                self.longest_streaks.write(caller, current_streak + 1);
             }
 
             self
